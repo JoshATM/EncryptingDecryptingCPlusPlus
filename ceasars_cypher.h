@@ -48,6 +48,9 @@ std::string file_input() {
 
 
 int encypher(std::string message) {
+
+    std::string encyphered_message = "";
+
     int user_input;
     int shift_amount;
     int random_number;
@@ -76,13 +79,26 @@ int encypher(std::string message) {
             std::cin >> shift_amount;
             for (int i = 0; i < message.size(); i++)
             {
-                char character = message[i]; // read 1 character at a time
-                if ()
+
+                /*
+                THINGS TO DO:
+                    MAKE SURE WHITE SPACE IS HANDLED CORRECTLY - LOOK AT HOW TO USE getline()
+                    MAKE SURE THE LETTEERS WRAP AROUND SO Z = A IF PLUS 1, NOT SOMETHING ELSE
+
+                    finish random and decypher
+                */
+                
+                
+                char character = message[i]; // loops through th message character by character
+                if (!isalpha(character)) // if there is a character that is not in th alphabet, don't shift it - can also do (character == ' ') but that only detects for spaces whereas isalpha() detects for a letter in the alphabet
                 {
-                    // shift it by shift_amount of times
+                    encyphered_message += character;
+                } else {   
+                    encyphered_message += (character + shift_amount);
                 }
             }
 
+            std::cout << encyphered_message;
 
             break;
         default:
@@ -124,7 +140,8 @@ int ceasars_cypher() {
                 std::cout << "\nPlease enter one of the following options:   0   1   2\n";
                 break;
         }
-
+        std::cout << message;
         encypher(message);
+        break;
     }
 }
