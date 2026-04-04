@@ -20,14 +20,14 @@ void ceasars_cypher() {
     std::ifstream in_user_file(user_file_name);
     std::ifstream in_dict_file(dict_file_name);
     
-    std::string current_line = "";
+    std::string current_line;
     // ' ' - 
     char character = ' ';
-    std::string word_maker = "";
-    std::string dict_word_maker = "";
+    std::string word_maker;
+    std::string dict_word_maker;
     // vector -  
-    std::vector<std::string> word = {};
-    std::vector<std::string> dict_word = {};
+    std::vector<std::string> word;
+    std::vector<std::string> dict_word;
     
     // ukenglish file
     if (in_dict_file.is_open())

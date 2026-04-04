@@ -6,13 +6,15 @@
 #include <iostream>
 
 // 
-int decypher_main() {
+void decypher_main() {
 // 8 bit unsigned integer
     int user_input;
 
+    std::string decyphered_message;
+
 // menu options
     std::cout << "\nWhat decyphering method would you like to use?\n";
-    std::cout << "0. Exit\n";
+    std::cout << "0. Go Back\n";
     std::cout << "1. Ceasars Decypher\n";
 
 // user input
@@ -21,7 +23,7 @@ int decypher_main() {
 // menu select
     switch (user_input) {
         case 0:
-            return 0;
+            return;
             break;    
         case 1:
             ceasars_decypher();
@@ -29,8 +31,6 @@ int decypher_main() {
         default:
             break;
     }
-    return 0;
 }
-
 
 #endif

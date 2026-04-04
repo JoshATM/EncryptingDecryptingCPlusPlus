@@ -9,6 +9,7 @@
 int main() {
 // 8 bit unsigned integer
     int user_input;
+    std::string encyphered_message;
 
     while (true) {
         // menu options
@@ -34,6 +35,5 @@ int main() {
             default:
                 break;
         }
-        return 0;
     }
 }

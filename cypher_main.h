@@ -6,13 +6,15 @@
 #include <iostream>
 
 // 
-int cypher_main() {
+void cypher_main() {
 // 8 bit unsigned integer
     int user_input;
+
+    std::string encyphered_message;
     
 // menu options
     std::cout << "\nWhat encyphering method would you like to use?\n";
-    std::cout << "0. Exit\n";
+    std::cout << "0. Go Back\n";
     std::cout << "1. Ceasars Cypher\n";
 
 // user input
@@ -21,7 +23,7 @@ int cypher_main() {
 // menu select
     switch (user_input) {
         case 0:
-            return 0;
+            return;
             break;    
         case 1:
             ceasars_cypher();
@@ -29,7 +31,6 @@ int cypher_main() {
         default:
             break;
     }
-    return 0;
 }
 
 #endif
